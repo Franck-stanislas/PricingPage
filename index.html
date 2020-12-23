@@ -1,169 +1,517 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-  <link href="fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet">
-  <!--load all styles -->
-
-  <title>Single princing page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet">
 </head>
 
-
 <body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-sm navbar-light bg-white py-4">
+                <a class="navbar-brand" href="#">
+                    <img class="img-fluid" src="image/logo.png" alt="MKonsulting">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="mdi mdi-menu"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link log-in-link" href="#">Log in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class=" btn get-started-btn" href="#!">Get start now</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1 class="text-center pricing-table-title">Plans de tarification</h1>
+            <p class="text-center pricing-table-subtitle">30 premiers jours absolument gratuits pour tout plan, pas de carte de crédit
+                nécessaire pour commencer.</p>
 
-  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-    <nav class="my-2 my-md-0 mr-md-3">
-      <img class="img-fluid" src="image/logo.png" alt="MKonsulting">    
-      <a class="p-2 text-dark" href="#">Features</a>
-      <a class="p-2 text-dark" href="#">Enterprise</a>
-      <a class="p-2 text-dark" href="#">Support</a>
-    </nav>
-    <a class="btn btn-outline-primary" href="#">Sign up</a>
-  </nav>
+            <ul class="nav nav-pills justify-content-center pricing-tab" id="pricing-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="monthly-tab" data-toggle="pill" href="#monthly" role="tab"
+                        aria-controls="monthly" aria-selected="true">Mensuel</a>
+                </li>
+                <div class="custom-control custom-switch pricing-tab-switch">
+                    <input type="checkbox" class="custom-control-input" id="pricing-tab-switch">
+                    <label class="custom-control-label" for="pricing-tab-switch"><span class="sr-only">Toggle
+                            Tabs</span></label>
+                </div>
+                <li class="nav-item">
+                    <a class="nav-link" id="yearly-tab" data-toggle="pill" href="#yearly" role="tab"
+                        aria-controls="yearly" aria-selected="false">Annuel</a>
+                </li>
+            </ul>
 
-  
+            <div class="tab-content pricing-tab-content" id="pricing-tab-content">
+                <div class="tab-pane active" id="monthly" role="tabpanel" aria-labelledby="monthly-tab">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card pricing-card">
+                                <div class="card-body">
+                                    <h3 class="pricing-plan-title">Business</h3>
+                                    <p class="h1 pricing-plan-cost">$10</p>
+                                    <ul class="pricing-plan-features">
+                                        <li>5GB file storage</li>
+                                        <li>File manager</li>
+                                        <li>Upgrade any time</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#!" class="card-link pricing-plan-purchase-btn">Get started</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card pricing-card pricing-card-highlighted">
+                                <div class="card-body">
+                                    <h3 class="pricing-plan-title">Enterprise</h3>
+                                    <p class="h1 pricing-plan-cost">$30</p>
+                                    <ul class="pricing-plan-features">
+                                        <li>15GB file storage</li>
+                                        <li>File manager</li>
+                                        <li>Upgrade any time</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#!" class="card-link pricing-plan-purchase-btn">Get started</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card pricing-card">
+                                <div class="card-body">
+                                    <h3 class="pricing-plan-title">Custom</h3>
+                                    <p class="h1 pricing-plan-cost">$50</p>
+                                    <ul class="pricing-plan-features">
+                                        <li>50GB file storage</li>
+                                        <li>File manager</li>
+                                        <li>Upgrade any time</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#!" class="card-link pricing-plan-purchase-btn">Get started</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="yearly" role="tabpanel" aria-labelledby="yearly-tab">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card pricing-card">
+                                <div class="card-body">
+                                    <h3 class="pricing-plan-title">Business</h3>
+                                    <p class="h1 pricing-plan-cost">$120</p>
+                                    <ul class="pricing-plan-features">
+                                        <li>5GB file storage</li>
+                                        <li>File manager</li>
+                                        <li>Upgrade any time</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#!" class="card-link pricing-plan-purchase-btn">Get started</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card pricing-card pricing-card-highlighted">
+                                <div class="card-body">
+                                    <h3 class="pricing-plan-title">Enterprise</h3>
+                                    <p class="h1 pricing-plan-cost">$360</p>
+                                    <ul class="pricing-plan-features">
+                                        <li>15GB file storage</li>
+                                        <li>File manager</li>
+                                        <li>Upgrade any time</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#!" class="card-link pricing-plan-purchase-btn">Get started</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card pricing-card">
+                                <div class="card-body">
+                                    <h3 class="pricing-plan-title">Custom</h3>
+                                    <p class="h1 pricing-plan-cost">$600</p>
+                                    <ul class="pricing-plan-features">
+                                        <li>50GB file storage</li>
+                                        <li>File manager</li>
+                                        <li>Upgrade any time</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#!" class="card-link pricing-plan-purchase-btn">Get started</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center pt-5 pb-4 mb-0">
+                <span class="font-weight-bold">Offre limitée:</span> économisez 30% sur un forfait annuel. Obtenez un coupon <a href="#!"
+                    class="coupon-page-link">ici</a>.
+            </p>
+        </div>
+    </main>
 
-  <section class="pricing py-5">
-
-    <div className="container-fluid padding">
-      <div className="row">
-          <div className="col-md-12">
-              <h1 className="display-4" style="text-align: center; color: #e3f2fd;">Choisi ton plan tarifaire et rejoins la communauté!!!</h1>
-          </div>
-      </div>
+    <div class="pricing__all-features-compared">
+        <h1 class="bold">
+            Toutes les fonctionnalités comparées
+        </h1>
     </div>
-<hr>
-    <div class="container">
-      <div class="row">
-        <!-- Free Tier -->
-        <div class="col-lg-4">
-          <div class="card mb-5 mb-lg-0">
-            <div class="card-body">
-              <h5 class="card-title text-uppercase text-center" style="color: blue;">Free</h5>
-              <h6 class="card-price text-center" style="color: blue;">$0<span class="period">/month</span></h6>
-              <hr>
-              <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>Single User</li>
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>5GB Storage</li>
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
-                <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Unlimited Private Projects
-                </li>
-                <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Dedicated Phone Support
-                </li>
-                <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain</li>
-                <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports
-                </li>
-              </ul>
-              <a href="#" class="btn btn-block btn-primary text-uppercase">S'abonner</a>
-            </div>
-          </div>
-        </div>
-        <!-- Basic Tier -->
-        <div class="col-lg-4">
-          <div class="card mb-5 mb-lg-0">
-            <div class="card-body">
-              <h5 class="card-title text-uppercase text-center" style="color: green;">Advanced</h5>
-              <h6 class="card-price text-center" style="color: green;">$9<span class="period">/month</span></h6>
-              <hr>
-              <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>5 Users</strong></li>
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>50GB Storage</li>
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Subdomain</li>
-                <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports
-                </li>
-              </ul>
-              <a href="#" class="btn btn-block btn-primary text-uppercase">S'abonner</a>
-            </div>
-          </div>
-        </div>
-        <!-- Pro Tier -->
-        <div class="col-lg-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title text-uppercase text-center" style="color: yellow;">Pro</h5>
-              <h6 class="card-price text-center" style="color: yellow;">$49<span class="period">/month</span></h6>
-              <hr>
-              <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited Users</strong></li>
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>150GB Storage</li>
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
-                <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited</strong> Free Subdomains
-                </li>
-                <li><span class="fa-li"><i class="fas fa-check"></i></span>Monthly Status Reports</li>
-              </ul>
-              <a href="#" class="btn btn-block btn-primary text-uppercase">S'abonner</a>
-            </div>
-          </div>
-        </div>
 
-      </div>
+    <!-- Table comparison -->
+    <div class="comparison">
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="tl tl2"></th>
+                    <th class="qbse">
+                        Travailleur indépendant et Freelance
+                    </th>
+                    <th colspan="3" class="qbo">
+                        Petites entreprises qui ont besoin de comptabilité, de facturation ou de paie
+                    </th>
+                </tr>
+                <tr>
+                    <th class="tl"></th>
+                    <th class="compare-heading">
+                        Business
+                    </th>
+
+                    <th class="compare-heading">
+                        Enterprise
+                    </th>
+                    <th class="compare-heading">
+                        Custom
+                    </th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td colspan="3">Séparer les affaires des dépenses personnelles</td>
+                </tr>
+                <tr class="compare-row">
+                    <td>Entreprise / personnel séparé</td>
+                    <td><span class="tickblue">✔</span></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td colspan="3">Estimer les paiements d'impôts</td>
+                </tr>
+                <tr>
+                    <td>Estimer les paiements d'impôts</td>
+                    <td><span class="tickblue">✔</span></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td colspan="3">Track deductible mileage</td>
+                </tr>
+                <tr class="compare-row">
+                    <td>Track deductible mileage</td>
+                    <td><span class="tickblue">✔</span></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td colspan="4">Télécharger la banque en ligne</td>
+                </tr>
+                <tr>
+                    <td>Télécharger la banque en ligne</td>
+                    <td><span class="tickblue">✔</span></td>
+                    <td><span class="tickgreen">✔</span></td>
+                    <td><span class="tickgreen">✔</span></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td colspan="4">Fonctionne sur PC, Mac et mobile</td>
+                </tr>
+                <tr class="compare-row">
+                    <td>Multi-appareil</td>
+                    <td><span class="tickblue">✔</span></td>
+                    <td><span class="tickgreen">✔</span></td>
+                    <td><span class="tickgreen">✔</span></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td colspan="4">Créer des factures et des devis</td>
+                </tr>
+                <tr>
+                    <td>Créer des factures et des devis</td>
+                    <td></td>
+                    <td><span class="tickgreen">✔</span></td>
+                    <td><span class="tickgreen">✔</span></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td colspan="4">Gérer la TVA</td>
+                </tr>
+                <tr class="compare-row">
+                    <td>Gérer la TVA</td>
+                    <td></td>
+                    <td><span class="tickgreen">✔</span></td>
+                    <td><span class="tickgreen">✔</span></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td colspan="4">Exécutez la paie</td>
+                </tr>
+                <tr>
+                    <td>Exécutez la paie</td>
+                    <td></td>
+                    <td><span class="tickgreen">✔</span></td>
+                    <td><span class="tickgreen">✔</span></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td colspan="4">Nombre d'utilisateurs</td>
+                </tr>
+                <tr class="compare-row">
+                    <td>Nombre d'utilisateurs</td>
+                    <td class="tickblue">1 user</td>
+                    <td class="tickgreen">3 users</td>
+                    <td class="tickgreen">5 users</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td colspan="4">Gérer les factures et les paiements</td>
+                </tr>
+                <tr>
+                    <td>Gérer les factures et les paiements</td>
+                    <td></td>
+                    <td><span class="tickgreen">✔</span></td>
+                    <td><span class="tickgreen">✔</span></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td colspan="4">Gérez plusieurs devises</td>
+                </tr>
+                <tr class="compare-row">
+                    <td>Gérez plusieurs devises</td>
+                    <td></td>
+                    <td><span class="tickgreen">✔</span></td>
+                    <td><span class="tickgreen">✔</span></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td colspan="4"> Créer des budgets</td>
+                </tr>
+                <tr>
+                    <td>Créer des budgets</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="tickgreen">✔</span></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td colspan="4">Suivre le temps des employés</td>
+                </tr>
+                <tr class="compare-row">
+                    <td>Suivre le temps des employés</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="tickgreen">✔</span></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td colspan="4">Contrôle du stock</td>
+                </tr>
+                <tr>
+                    <td>Contrôle du stock</td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="tickgreen">✔</span></td>
+                </tr>
+            </tbody>
+        </table>
+
     </div>
-  </section>
 
+    <!-- Div current question -->
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <footer class="pt-4 my-md-5 pt-md-5 border-top">
-          <div class="row">
-            <div class="col-12 col-md">
-              <a href="https://www.mkbid.softmk.com/">
-                <img class="mb-2" src="image/logo.png" alt="logo MKBID" width="24" height="24">
-              </a>
-              <small class="d-block mb-3 text-muted">&copy; 2017-2020</small>
+        <div class="my-5">
+            <div class="text-center my-4">
+                <h4>Questions fréquentes</h4>
             </div>
-            <div class="col-6 col-md">
-              <h5>Features</h5>
-              <ul class="list-unstyled text-small">
-                <li><a class="text-muted" href="#">Cool stuff</a></li>
-                <li><a class="text-muted" href="#">Random feature</a></li>
-                <li><a class="text-muted" href="#">Team feature</a></li>
-                <li><a class="text-muted" href="#">Stuff for developers</a></li>
-                <li><a class="text-muted" href="#">Another one</a></li>
-                <li><a class="text-muted" href="#">Last time</a></li>
-              </ul>
+            <div aria-multiselectable="true" class="row" id="accordion" role="tablist">
+                <div class="col-sm-6">
+                    <div class="card no-shadow bordered">
+                        <div class="card-header card-header-tab" data-parent="#accordion" data-toggle="collapse"
+                            href="#inscription" id="headingOne" role="tab">
+                            <h6 class="mb-0"><a aria-controls="inscription" aria-expanded="true" class="text-muted"
+                                    data-parent="#accordion" data-toggle="collapse" href="#payment_card_detail">Suis-je
+                                    obligé de payer pour m'inscrire sur Codeur.com ? <span class="float-right">
+                                        <i class="fas fa-chevron-down"></i></span></a>
+                            </h6>
+                        </div>
+                        <div aria-labelledby="headingOne" class="collapse" id="inscription" role="tabpanel">
+                            <div class="card-body pt-4">
+                                <p class="m-0">Non, l'inscription est gratuite avec le plan Membre gratuit. Par contre,
+                                    il est nécessaire de s'abonner pour pouvoir faire des devis sur les appels d'offres
+                                    publiés par nos clients. Vous pouvez résilier votre abonnement à tout moment.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card no-shadow bordered">
+                        <div class="card-header card-header-tab" data-parent="#accordion" data-toggle="collapse"
+                            href="#post_offer" id="headingOne" role="tab">
+                            <h6 class="mb-0"><a aria-controls="post_offer" aria-expanded="true" class="text-muted"
+                                    data-parent="#accordion" data-toggle="collapse" href="#payment_card_detail">Que
+                                    signifie répondre à un projet ? <span class="float-right">
+                                        <i class="fas fa-chevron-down"></i></span></a>
+                            </h6>
+                        </div>
+                        <div aria-labelledby="headingOne" class="collapse" id="post_offer" role="tabpanel">
+                            <div class="card-body pt-4">
+                                <p class="m-0">Les clients publient des projets. Ils recherchent un prestataire pour
+                                    accomplir des tâches bien précises. Faire un devis signifie proposer un prix, un
+                                    délai et une prestation aux clients et avoir la possibilité de les contacter par
+                                    messagerie privée.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card no-shadow bordered">
+                        <div class="card-header card-header-tab" data-parent="#accordion" data-toggle="collapse"
+                            href="#payment_mean" id="headingOne" role="tab">
+                            <h6 class="mb-0"><a aria-controls="payment_mean" aria-expanded="true" class="text-muted"
+                                    data-parent="#accordion" data-toggle="collapse" href="#payment_card_detail">Quels
+                                    sont les moyens paiement disponible ? <span class="float-right">
+                                        <i class="fas fa-chevron-down"></i></span></a>
+                            </h6>
+                        </div>
+                        <div aria-labelledby="headingOne" class="collapse" id="payment_mean" role="tabpanel">
+                            <div class="card-body pt-4">
+                                <p class="m-0">Il est possible de payer un abonnement par carte bancaire ou PayPal.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card no-shadow bordered">
+                        <div class="card-header card-header-tab" data-parent="#accordion" data-toggle="collapse"
+                            href="#duration" id="headingOne" role="tab">
+                            <h6 class="mb-0"><a aria-controls="duration" aria-expanded="true" class="text-muted"
+                                    data-parent="#accordion" data-toggle="collapse" href="#payment_card_detail">Quelle
+                                    est la durée minimale des abonnements ? <span class="float-right">
+                                        <i class="fas fa-chevron-down"></i></span></a>
+                            </h6>
+                        </div>
+                        <div aria-labelledby="headingOne" class="collapse" id="duration" role="tabpanel">
+                            <div class="card-body pt-4">
+                                <p class="m-0">La durée minimale d’abonnement est d’un mois (30 jours).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card no-shadow bordered">
+                        <div class="card-header card-header-tab" data-parent="#accordion" data-toggle="collapse"
+                            href="#deactivate_renew" id="headingOne" role="tab">
+                            <h6 class="mb-0"><a aria-controls="deactivate_renew" aria-expanded="true" class="text-muted"
+                                    data-parent="#accordion" data-toggle="collapse" href="#payment_card_detail">Peut-on
+                                    se désabonner à tout moment ? <span class="float-right">
+                                        <i class="fas fa-chevron-down"></i></span></a>
+                            </h6>
+                        </div>
+                        <div aria-labelledby="headingOne" class="collapse" id="deactivate_renew" role="tabpanel">
+                            <div class="card-body pt-4">
+                                <p class="m-0">Oui. La période d’abonnement est de 30 jours à partir de la date de
+                                    paiement. Le renouvellement est automatique mais vous pouvez le stopper et résilier
+                                    votre abonnement à tout moment.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card no-shadow bordered">
+                        <div class="card-header card-header-tab" data-parent="#accordion" data-toggle="collapse"
+                            href="#stop_renew" id="headingOne" role="tab">
+                            <h6 class="mb-0"><a aria-controls="stop_renew" aria-expanded="true" class="text-muted"
+                                    data-parent="#accordion" data-toggle="collapse" href="#payment_card_detail">Comment
+                                    pourrais-je résilier l'abonnement ? <span class="float-right">
+                                        <i class="fas fa-chevron-down"></i></span></a>
+                            </h6>
+                        </div>
+                        <div aria-labelledby="headingOne" class="collapse" id="stop_renew" role="tabpanel">
+                            <div class="card-body pt-4">
+                                <p class="m-0">Vous pourrez vous rendre à tout moment dans la rubrique "Mon abonnement"
+                                    de votre compte afin de le résilier.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-6 col-md">
-              <h5>Resources</h5>
-              <ul class="list-unstyled text-small">
-                <li><a class="text-muted" href="#">Resource</a></li>
-                <li><a class="text-muted" href="#">Resource name</a></li>
-                <li><a class="text-muted" href="#">Another resource</a></li>
-                <li><a class="text-muted" href="#">Final resource</a></li>
-              </ul>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p>Pour toute question, vous pouvez <a href="#">nous contacter</a> sans hésiter</p>
+                </div>
             </div>
-            <div class="col-6 col-md">
-              <h5>About</h5>
-              <ul class="list-unstyled text-small">
-                <li><a class="text-muted" href="#">Team</a></li>
-                <li><a class="text-muted" href="#">Locations</a></li>
-                <li><a class="text-muted" href="#">Privacy</a></li>
-                <li><a class="text-muted" href="#">Terms</a></li>
-              </ul>
-            </div>
-          </div>
-        </footer>
-      </div>
+        </div>
     </div>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-    crossorigin="anonymous"></script>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-lg-4 footer-about wow fadeInUp">
+                        <img class="logo-footer" src="image/logo.png" alt="MKonsulting" data-at2x="assets/img/logo.png">
+                        <p>
+                            Nous sommes une jeune entreprise toujours à la recherche d'idées nouvelles et créatives pour vous aider dans notre
+                            produits dans votre travail quotidien.
+                        </p>
+                        <p><a href="#">Notre équipe</a></p>
+                    </div>
+                    <div class="col-md-4 col-lg-4 offset-lg-1 footer-contact wow fadeInDown">
+                        <h3>Contact</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Via Rossini 10, 10136 Turin Italy</p>
+                        <p><i class="fas fa-phone"></i> Phone: (0039) 333 12 68 347</p>
+                        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:hello@domain.com">hello@domain.com</a>
+                        </p>
+                        <p><i class="fab fa-skype"></i> Skype: you_online</p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 footer-social wow fadeInUp">
+                        <h3>Follow us</h3>
+                        <p>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="1.js"></script>
 </body>
 
 </html>
